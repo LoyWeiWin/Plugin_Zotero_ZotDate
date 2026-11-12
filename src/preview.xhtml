@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <title>ZotDate</title>
+  <link rel="stylesheet" href="preview.css" />
+  <script defer="defer" src="preview.js"></script>
+</head>
+<body>
+  <header>
+    <h1 id="heading">Keep publication years only</h1>
+    <p id="scope"></p>
+    <p id="explanation">Review the changes below. Original dates are backed up before conversion.</p>
+  </header>
+  <section id="date-options" class="date-options" aria-label="Numeric date interpretation" hidden="hidden">
+    <div class="order-controls">
+      <label>Year first <select id="year-first"><option value="ymd">YYYY-MM-DD (standard)</option><option value="ydm">YYYY-DD-MM</option><option value="skip">Skip ambiguous dates</option></select></label>
+      <label>Year last <select id="year-last"><option value="skip">Skip ambiguous dates</option><option value="dmy">DD-MM-YYYY</option><option value="mdy">MM-DD-YYYY</option></select></label>
+    </div>
+    <p>These choices resolve ambiguous numeric dates. Clear dates and written month names are recognised automatically. No missing month or day is added.</p>
+  </section>
+  <section class="controls" aria-label="Preview controls">
+    <label>Show <select id="filter"><option value="all">All items</option><option value="convert">Ready to change</option><option value="skipped">Skipped</option><option value="unchanged">Already formatted</option></select></label>
+    <label class="search">Find <input id="search" type="search" placeholder="Title or original date" /></label>
+    <button id="select-all" type="button">Select all changes</button>
+    <button id="select-none" type="button">Select none</button>
+  </section>
+  <p id="counts" role="status" aria-live="polite"></p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th aria-label="Selected"></th><th>Item</th><th>Current date</th><th id="target-label">Year to keep</th><th>Status</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+  <nav class="pagination" aria-label="Pages"><button type="button" id="previous">Previous</button><span id="page-label"></span><button type="button" id="next">Next</button></nav>
+  <p id="message" role="status" aria-live="polite"></p>
+  <footer><span id="note">Only the publication Date field is changed.</span><button id="close" type="button">Cancel</button><button id="apply" type="button" class="primary">Convert selected dates</button></footer>
+</body>
+</html>

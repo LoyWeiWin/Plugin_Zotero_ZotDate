@@ -1,0 +1,12 @@
+{
+  "suggested_name": "ZotDate",
+  "description": "Standardise Zotero publication dates while preserving available detail, with preview, backups and undo.",
+  "topics": [
+    "zotero",
+    "zotero-plugin",
+    "reference-management",
+    "metadata"
+  ],
+  "version": "1.0.0",
+  "status": "repository draft; not published"
+}

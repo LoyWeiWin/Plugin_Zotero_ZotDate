@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "ZotDate",
+  "version": "1.0.0",
+  "description": "Standardise publication dates as YYYY-MM-DD, YYYY-MM or YYYY, or keep years only, with backups and undo.",
+  "author": "Loy",
+  "applications": {
+    "zotero": {
+      "id": "year-only-publication-dates@loy.local",
+      "update_url": "https://updates.invalid/year-only-publication-dates.json",
+      "strict_min_version": "7.0",
+      "strict_max_version": "10.0.*"
+    }
+  },
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png",
+    "128": "icons/icon-128.png"
+  }
+}
