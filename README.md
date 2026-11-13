@@ -47,32 +47,7 @@ ZotDate edits the publication Date field, including equivalent date fields for o
 
 Backups are local, under `year-only-publication-dates/backups/` in the Zotero data directory. They are not included in Zotero item sync. If a backup cannot be written, conversion stops before editing dates. Conversion batches use a database transaction.
 
-The plugin runs when invoked from its menu. It does not continuously reformat newly imported records. A year-only value cannot recover a month or day that is no longer present.
-
-## Compatibility and validation
-
-The manifest permits Zotero 7.0 through 10.0.x. That range is a compatibility declaration, not a test result for every version or platform.
-
-The 1.0.0 branding release passed 20 automated parser and controller tests, JavaScript syntax checks, XHTML parsing and source/XPI parity checks. Earlier validation evidence is retained in `LEGACY_VALIDATION.json`; it refers to the predecessor build. Live Zotero and native Windows testing have not been repeated for this release.
-
-The original add-on ID and backup format are retained. If Zotero refuses to replace the earlier 1.1.0 build with this 1.0.0 build, remove the older add-on, restart Zotero, then install ZotDate. Existing backup files remain in the data directory.
-
-## Build and test
-
-Requires Python 3 for packaging and Node.js 18 or newer for automated tests.
-
-```sh
-node --test tests/*.test.cjs
-python3 build.py
-```
-
-The build produces `dist/ZotDate_v1.0.0.xpi`. Application files live in `src/`. The privileged live integration harness is for a disposable Zotero profile only; see the user guide.
-
-## Privacy and maintenance
-
-Processing and backups are local. No telemetry or external reference processing is included. Zotero can sync edited metadata through its normal sync process. This build has no hosted automatic update feed; install later versions manually.
-
-This is an independent plugin and is not affiliated with Zotero. The source package did not include an explicit standalone license; a distribution license should be selected by the author before public release.
+The plugin runs when invoked from its menu. It does not continuously reformat newly imported records. A year-only value cannot recover a month or day that is no longer present
 
 ## Included logo
 
